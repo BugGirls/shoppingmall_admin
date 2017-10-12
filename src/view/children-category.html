@@ -1,0 +1,29 @@
+<!-- 查看子品类页面 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+	    <title><%=htmlWebpackPlugin.options.title%> - shoppingmall电商平台</title>
+	</head>
+
+	<body>
+		<div class="children-category-div">
+			<!-- 头部信息 -->
+			<div class="page-header">
+			  	<h1><a href='./index.html'>品类管理</a> --> 查看子品类</h1>
+			  	<div class="add-children-category">
+					  <a target="_blank" class="btn btn-info" id="add-children-category-btn">
+					  	<span class="glyphicon glyphicon-plus"></span>
+					  	添加品类
+					  </a>
+				  </div>
+			</div>
+
+			<!-- 展示品类信息列表 -->
+			<div class="children-category-list">
+				
+			</div>
+		</div>
+	</body>
+</html>

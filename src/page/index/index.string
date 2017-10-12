@@ -1,0 +1,41 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>id</th>
+			<th>信息</th>
+			<th>价格</th>
+			<th>状态</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#list}}
+		<tr>
+			<td>{{id}}</td>
+			<td>{{name}}</td>
+			<td>{{price}}</td>
+			<td>
+				{{#state}}
+				在售
+				<button id="sold-btn" class="btn btn-warning sold-out" data-product-id="{{id}}" data-product-status="2">下架</button>
+				{{/state}}
+				{{^state}}
+				下架
+				<button id="sold-btn" class="btn btn-success sold-out" data-product-id="{{id}}" data-product-status="1">上架</button>
+				{{/state}}
+			</td>
+			<td>
+				<button class="btn btn-link" class="product-update" id="product-update-btn" data-product-id="{{id}}">修改</button>
+				<button class="btn btn-link" class="product-delete" id="product-delete-btn" data-product-id="{{id}}">删除</button>
+			</td>
+		</tr>
+		{{/list}}
+
+	</tbody>
+</table>
+<!-- status为true，说明商品列表为空，则显示提示信息 -->
+{{#isNull}}
+	<div class="alert alert-danger no-product" role="alert">
+		没有您需要的商品！
+	</div>
+{{/isNull}}

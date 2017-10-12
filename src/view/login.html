@@ -1,0 +1,35 @@
+<!-- 管理员登录页 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+	    <title><%=htmlWebpackPlugin.options.title%> - shoppingmall电商平台</title>
+	</head>
+
+	<body>
+		<div class="w">
+			<div class="page-header">
+				<h1>Admin Login</h1>
+			</div>
+
+			<div class="input-list">
+			  <div class="input-item">
+			    <input type="text" class="form-control" id="username" placeholder="Username">
+			  </div>
+			  <div class="input-item">
+			  	<input type="password" class="form-control" id="password" placeholder="Password">
+			  </div>
+			  <div class="input-item">
+			  	<button type="submit" class="btn btn-default" id="submit">Sign in</button>
+			  </div>
+			</div>
+
+			<div class="alert alert-danger error-tip" role="alert">
+				Please enter a username
+			</div>
+		</div>
+
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+</html>

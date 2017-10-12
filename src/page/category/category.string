@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>品类ID</th>
+			<th>品类名称</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#list}}
+		<tr>
+			<td>{{id}}</td>
+			<td>{{name}}</td>
+			<td>
+				<button class="btn btn-link" class="category-update" id="category-update-btn" data-category-id="{{id}}">修改</button>
+				<button class="btn btn-link" class="children-category" id="category-children-btn" data-category-id="{{id}}">查看其子品类</button>
+			</td>
+		</tr>
+		{{/list}}
+	</tbody>
+</table>

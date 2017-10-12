@@ -1,0 +1,23 @@
+
+.page-header {
+	margin-left:7%;
+}
+.top {
+	margin-top: 5px;
+}
+.pay {
+	margin-left: 20px;
+}
+.send {
+	margin-left: 20px;
+}
+.imgDiv {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #eee;
+	font-size: 12px;
+}
+.p-img {
+	width: 100px;
+	height: 100px;
+}

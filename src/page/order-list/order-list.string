@@ -1,0 +1,33 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>订单号</th>
+			<th>收件人</th>
+			<th>订单状态</th>
+			<th>订单总价</th>
+			<th>创建时间</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#list}}
+		<tr>
+			<td>{{orderNo}}</td>
+			<td>{{receiverName}}</td>
+			<td>{{statusDesc}}</td>
+			<td>￥{{payment}}</td>
+			<td>{{createTime}}</td>
+			<td>
+				<button class="btn btn-link" class="order-detail" id="order-detail-btn" data-order-detail-id="{{orderNo}}">查看</button>
+			</td>
+		</tr>
+		{{/list}}
+
+	</tbody>
+</table>
+<!-- isNull为true，说明订单列表为空，则显示提示信息 -->
+{{#isNull}}
+	<div class="alert alert-danger no-product" role="alert">
+		没有您需要的订单信息！
+	</div>
+{{/isNull}}

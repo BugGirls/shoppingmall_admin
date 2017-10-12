@@ -1,0 +1,12 @@
+/*查看子品类CSS*/
+
+.children-category-div {
+	margin-left:7%;
+	width: 88%;
+	position: relative;
+}
+.add-children-category {
+	position: absolute;
+	right:10%;
+	top: 5px;
+}

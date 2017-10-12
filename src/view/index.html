@@ -1,0 +1,98 @@
+<!-- 首页 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+	    <title><%=htmlWebpackPlugin.options.title%> - shoppingmall电商平台</title>
+	</head>
+
+	<body>
+		<div>
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs" id="navTabUl" role="tablist">
+		    <li role="presentation" id="home-pane" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+		    <li role="presentation" id="product-pane"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">商品管理</a></li>
+		    <li role="presentation" id="category-pane"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">品类管理</a></li>
+		    <li role="presentation" id="order-pane"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">订单管理</a></li>
+		  </ul>
+
+		  <!-- Tab panes -->
+		  <div class="tab-content">
+		    <div role="tabpanel" class="tab-pane active" id="home">
+				<div class="jumbotron">
+				  <h1>后台管理</h1>
+				</div>
+		    </div>
+		    <!-- 商品管理 -->
+		    <div role="tabpanel" class="tab-pane product-pane" id="profile">
+				<!-- 头部信息 -->
+				<div class="page-header">
+				  <h1>商品管理</h1>
+				  <div class="add-product">
+					  <a target="_blank" class="btn btn-info" id="add-product-btn">
+					  	<span class="glyphicon glyphicon-plus"></span>
+					  	添加商品
+					  </a>
+				  </div>
+				</div>
+					
+				<!-- 搜索按钮 -->
+				<div class="page-header query">
+				  	<select class="form-control query-type" id="query-type">
+						<option value="id">按id查询</option>
+						<option value="name">按名称查询</option>
+					</select>
+					<input type="text" class="form-control keyword" id="keyword" placeholder="请输入关键字" />
+					<button class="btn btn-default query-btn" id="query-product-btn">查询</button>
+				</div>
+				
+				<!-- 展示商品信息列表 -->
+				<div class="product-list">
+					
+				</div>
+		    </div>
+		    <!-- 品类管理 -->
+		    <div role="tabpanel" class="tab-pane category-pane" id="messages">
+				<!-- 头部信息 -->
+				<div class="page-header">
+				  <h1>品类管理</h1>
+				  <div class="add-category">
+					  <a target="_blank" class="btn btn-info" id="add-category-btn">
+					  	<span class="glyphicon glyphicon-plus"></span>
+					  	添加品类
+					  </a>
+				  </div>
+				</div>
+				
+				<!-- 展示品类信息列表 -->
+				<div class="category-list">
+					
+				</div>
+		    </div>
+		    <!-- 订单管理 -->
+		    <div role="tabpanel" class="tab-pane order-pane" id="settings">
+				<!-- 头部信息 -->
+				<div class="page-header">
+				  <h1>订单管理</h1>
+				</div>
+
+				<!-- 搜索按钮 -->
+				<div class="page-header query">
+				  	<select class="form-control query-type" id="query-type-order">
+						<option value="orderNo">按订单号查询</option>
+					</select>
+					<input type="text" class="form-control keyword" id="keyword-order" placeholder="请输入关键字" />
+					<button class="btn btn-default query-btn" id="query-order-btn">查询</button>
+				</div>
+				
+				<!-- 展示订单信息列表 -->
+				<div class="order-list">
+					
+				</div>
+		    </div>
+		  </div>
+		</div>
+
+	</body>
+</html>

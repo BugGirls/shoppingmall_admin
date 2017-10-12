@@ -1,0 +1,54 @@
+.product-pane {
+	position: relative;
+}
+.add-product {
+	position: absolute;
+	right:10%;
+	top: 5px;
+}
+.category-pane {
+	position: relative;
+}
+.add-category {
+	position: absolute;
+	right:10%;
+	top: 5px;
+}
+.query {
+	height: 20px;
+}
+.query-type {
+	width:200px;
+	margin-top:-27px;
+	margin-left:20px;
+	float: left;
+}
+.keyword {
+	width: 200px;
+	float: left;
+	margin-top: -27px;
+	margin-left: 20px;
+}
+.query-btn {
+	margin-top: -42px;
+	margin-left: 20px;
+}
+.product-list {
+	width: 88%;
+	margin: 0 auto;
+}
+.order-list {
+	width: 88%;
+	margin: 0 auto;
+}
+.table-bordered {
+	width: 98%;
+	margin:0 auto;
+}
+.sold-out {
+	margin-left:10px;
+}
+.no-product {
+	width:98%;
+	margin:20px auto;
+}
